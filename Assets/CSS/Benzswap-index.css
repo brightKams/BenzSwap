@@ -30,8 +30,13 @@ body {
 
 
 .all-borders {
-    /* border: var(--default-border); */
+    border: var(--default-border);
     min-height: 10px;
+}
+p   {
+    font-size: 1.3rem;
+    text-align: justify;
+    margin: 0 15px 0 0;
 }
 
 /* beginning of the header and navigation bars  */
@@ -63,17 +68,19 @@ body {
     padding: 5px;
     display: flex;
     align-items: center;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 .logo > img {
     width: 80px;
     height: 65px;
+    /* margin-top: 15px; */
 }
 
 .logo p {
     position: relative;
-    left: -25px;
+    left: 0px;
+    /* top: 10px; */
 }
 
 /* .responsive-menu-container {
@@ -91,21 +98,31 @@ nav ul {
 }
 
 nav ul li {
-    margin: 10px;
-    font-size: 0.8rem;
+    /* margin: 10px; */
+    font-size: 1rem;
     overflow: hidden;
+    padding: 15px;
+    /* border: 1px solid; */
+}
+
+nav ul li:hover {
+    /* padding: 15px; */
+    /* border: 1px solid; */
+    background-color: var(--btnBackgroundColor);
+    color: var(--dark);
 }
 
 .launch-app {
     border: 1px solid var(--btnBackgroundColor);
     /* height: calc(1rem + 3px); */
-    width: 100px;
+    max-width: 200px;
     /* height: 30px; */
     padding: 10px;
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 5px;
 
 }
 
@@ -118,7 +135,17 @@ nav ul li.active:hover, ul li a:hover {
 
 ul li a {
     text-decoration: none;
-    color: var(--btnBackgroundColor);
+    color: var(--avatarDetailsColor);
+    /* display: inline-block;
+    height: 10px;
+    width: 100px;
+    padding: 10px; */
+    
+}
+
+ul li a:hover {
+    text-decoration: none;
+    color: var(--avatarDetailsColor);
     /* display: inline-block;
     height: 10px;
     width: 100px;
@@ -186,7 +213,7 @@ section {
     margin: 8px;
     outline: 1px solid var(--btnBackgroundColor);
     /* border-color: #db677a; */
-    background-color: transparent;
+    background-color: #fff;
     border: none;
 }
 
@@ -194,6 +221,16 @@ section {
 
     background-color: var(--btnBackgroundColor);
     color: #fff;
+}
+
+.btn-dark-mode  {
+    background-color: var(--btnBackgroundColor) !important;
+    color: var(--light-color) !important;
+}
+
+.btn-dark-mode:hover  {
+    background-color: var(--light-color);
+    color: var(--btnBackgroundColor);
 }
 
 .trade-crypto-main-text {
@@ -222,8 +259,8 @@ section {
 .launch-app-mobile-images {
     width: 80%;
     min-height: 300px;
-    background-image: url("../images/crypto-images/Neon-resized-#02-1.png");
-    background-repeat: repeat;
+    background-image: url("../images/background-images/Neon-removebg-preview.png");
+    background-repeat: no-repeat;
     background-size: contain;
     position: relative;
 }
@@ -348,9 +385,9 @@ section {
 }
 
 
-.learn-More-button-in-crypto-images {
+/* .learn-More-button-in-crypto-images {
     margin-left: 3%;
-}
+} */
 
 /* End of section layer 3 */
 
@@ -363,7 +400,7 @@ section {
 }
 
 .section-layer4>div:first-child {
-    width: 55%;
+    /* width: 55%; */
 
 }
 
@@ -387,10 +424,16 @@ section {
     margin: auto;
 }
 
-.crypto-coins-logo-image {
+/* .crypto-coins-logo-image {
     width: 48%;
     max-height: 250px;
     margin: auto auto auto 6%;
+} */
+
+.crypto-coins-logo-image {
+    width: 25%;
+    max-height: 250px;
+    margin: -1% auto auto 6%;
 }
 
 .crypto-coins-logo-image> img {
@@ -566,7 +609,25 @@ section {
 .road-map-third-layer.all-borders   {
     height: 500px; 
     margin: 15px 0px; 
+    /* background-image:url("../images/background-images/roadmap-light.png") ; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.roadMapImage-light   {
+    height: 500px; 
+    margin: 15px 0px; 
     background-image:url("../images/background-images/roadmap-light.png") ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.roadMapImage-dark   {
+    height: 500px; 
+    margin: 15px 0px; 
+    background-image:url("../images/background-images/roadmap-dark.png") ;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -610,6 +671,10 @@ section {
     padding: 3%;
 }
 
+.all-team-member-avatar-container-dark-mode {
+    background-color: #2d2121;
+}
+
 .team-member.all-borders > .all-team-member-avatar-container.all-borders:last-of-type   {
     margin-right: 20px;
 }
@@ -636,6 +701,11 @@ section {
     padding: 5px; 
     text-align: center;
     color: var(--avatarDetailsColor);
+    height: 40px;
+}
+
+div.team-member-avatar-details.all-borders > small  {
+    
 }
 
 .team-member-avatar-details > h2 {
@@ -753,7 +823,7 @@ section {
     width: 100%;
     height: 30px;
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .newsletter-details.all-borders > .newsletter-input-details > input:focus   {
@@ -764,7 +834,8 @@ section {
     width: 25%;
     height: 60%;
     position: absolute;
-    right: 0;
+    top: 10px;
+    right: 7px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -792,7 +863,7 @@ section {
 /* Mode toggle button */
 
 .mode-toggle-btn.all-borders    {
-    height: 50px;
+    height: 30px;
     width: 100px;
     background-color: #fff;
     padding: 5px;
@@ -802,15 +873,18 @@ section {
 }
 
 .toggle.all-borders {
-    height: 40px;
-    width: 40px;
+    height: 20px;
+    width: 20px;
     /* margin: 10px; */
     background-color: var(--avatarDetailsColor);
     border-radius: 50%;
-    float:left;
+    /* float:left; */
     color:var(--light-color);
 }
 
+/* .toggle-position {
+    float: right;
+} */
 /* RESPONSIVE MENU ICON  */
 
 @media screen and (max-width:768px) {
@@ -879,7 +953,7 @@ section {
 
     nav ul li {
         height: 50px;
-        padding: 5px auto;
+        padding: 5px 0px;
         font-size: 1rem;
         overflow: hidden;
     }
@@ -888,7 +962,7 @@ section {
         border: none;
         /* height: calc(1rem + 3px); */
         width: 100%;
-        padding: 25px auto;
+        padding: 0px;
         border-radius: 0px;
         /* display: block; */
         /* margin-left: 0; */
@@ -1021,7 +1095,9 @@ section {
     }
     
     
-
+    .all-footer-contents.all-borders h3 {
+        font-size: 1.1rem;
+    }
     
 
     
@@ -1104,6 +1180,12 @@ section {
     background-color: var(--btnBackgroundColor);
     border: none;
     color: #fff;
+}
+
+
+.btn-dark-mode:hover  {
+    background-color: var(--light-color);
+    color: var(--btnBackgroundColor);
 }
 
 .introducing-benzswap-mainText,

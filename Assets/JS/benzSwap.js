@@ -6,22 +6,13 @@
 
 
 let body = document.querySelector("body")
+// body.classList.toggle("dark-mode")
 
-        // body.classList.toggle("dark-mode")
         console.log(body)
 
-        let toggleMode = document.querySelector(".toggle.all-borders")
-        console.log(toggleMode)
+        
 
-        toggleMode.addEventListener("click", ()=> {
-            toggleMode.style.float = "right"
 
-            body.classList.toggle("dark-mode")
-
-            if (! body.classList.contains("dark-mode")) {
-                toggleMode.style.float = "left"
-            }
-        })
 
         let header = document.querySelector("header")
         console.log(header)
@@ -47,7 +38,7 @@ let body = document.querySelector("body")
 
         console.log(ulNav)
 
-        let navigationContent1 = document.querySelector("ul a  label")
+        let navigationContent1 = document.querySelectorAll("ul li a  label")
 
         console.log(navigationContent1)
 
@@ -72,7 +63,7 @@ let body = document.querySelector("body")
 
         let launchApp2 = document.querySelector(".btn.btn-2.launch-app-btn")
 
-
+        console.log(launchApp2);
         
         
 
@@ -122,77 +113,139 @@ let body = document.querySelector("body")
 
 
 
-        if (body.classList.contains("dark-mode"))   {
-
-            header.style.backgroundColor ="#000"
-            nav.style.backgroundColor = "#000"
-            allNav.style.backgroundColor = "#000"
-            navLogo.style.backgroundColor = "#000"
-            navLogoText.style.color = "#fff"
+        let btnm = document.querySelectorAll(".btn")
+        
+        console.log(btnm)
 
 
-            ulNav.style.backgroundColor = "#000"
-            navigationContent1.style.color = "#fff"
+        let toggleMode = document.querySelector(".toggle.all-borders")
+        console.log(toggleMode)
 
-            navigationContent2.style.color = "#fff"
-            
-            navigationContent3.style.color = "#fff"
+        toggleMode.addEventListener("click", ()=> {
+            toggleMode.style.float = "right"
 
-            navigationContent4.style.color = "#fff"
-
-            navigationContent5.style.color = "#fff"
-
-            navigationContent6.style.color = "#fff"
-
-            navigationContent7.style.color = "#fff"
-
-            launchApp.style.backgroundColor = "#000"
-
-            launchApp2.style.backgroundColor = "#000"
-            launchApp2.style.color = "#fff"
-
-
-
-
-
-
-            navLogoImage.src = "BENSWAP-LOGO-14-removebg-preview.png"
-
-
-
-            learnMore1.style.backgroundColor = "#000"
-            learnMore1.style.color = "#fff"
+            body.classList.toggle("dark-mode")
             
 
-            learnMore2.style.backgroundColor = "transparent"
-            learnMore2.style.color = "#fff"
+            if (body.classList.contains("dark-mode"))   {
+                // btnm.classList.toggle("btn-dark-mode")
+                
+                header.style.backgroundColor ="#000"
+                nav.style.backgroundColor = "#000"
+                allNav.style.backgroundColor = "#000"
+                navLogo.style.backgroundColor = "#000"
+                navLogoText.style.color = "#fff"
+    
+    
+                ulNav.style.backgroundColor = "#000"
+                // navigationContent1.style.color = "#fff"
+    
+                // navigationContent2.style.color = "#fff"
+                
+                // navigationContent3.style.color = "#fff"
+    
+                // navigationContent4.style.color = "#fff"
+    
+                // navigationContent5.style.color = "#fff"
+    
+                // navigationContent6.style.color = "#fff"
+    
+                // navigationContent7.style.color = "#fff"
+    
+                launchApp.style.backgroundColor = "#000"
+    
+                launchApp2.style.backgroundColor = "var(--btnBackgroundColor)"
+                console.log(launchApp2)
+                launchApp2.style.color = "#fff"
+    
+    
+    
+    
+    
+    
+                navLogoImage = "../images/benzswap-logo/BENSWAP-LOGO-14-removebg-preview.png"
+                console.log(navLogoImage);
+    
+    
+    
+                learnMore1.style.backgroundColor = "#000"
+                learnMore1.style.color = "#fff"
+                
+    
+                learnMore2.style.backgroundColor = "transparent"
+                learnMore2.style.color = "#fff"
+    
+                coreFeaturesContainers1.style.backgroundColor = "transparent"
+                
+                coreFeaturesContainers1.style.boxShadow = "none"
+    
+                coreFeaturesContainers2.style.backgroundColor = "rgba(200, 194, 194, 0.5)"
+    
+                coreFeaturesContainers2.style.boxShadow = "none"
+    
+    
+                coreFeaturesContainers3.style.backgroundColor = "rgba(200, 194, 194, 0.5)"
+    
+                coreFeaturesContainers3.style.boxShadow = "none"
+    
+    
+                coreFeaturesContainers4.style.backgroundColor = "rgba(200, 194, 194, 0.5)"
+    
+                coreFeaturesContainers4.style.boxShadow = "none"
+    
+    
+                coreFeaturesContainers5.style.backgroundColor = "rgba(200, 194, 194, 0.5)"
+    
+                coreFeaturesContainers5.style.boxShadow = "none"
+    
+    
+                coreFeaturesContainers6.style.backgroundColor = "rgba(200, 194, 194, 0.5)"
+    
+                coreFeaturesContainers6.style.boxShadow = "none"
+    
+            }
+            else        {
+                
+                toggleMode.style.float = "left"
 
-            coreFeaturesContainers1.style.backgroundColor = "transparent"
+            }
             
-            coreFeaturesContainers1.style.boxShadow = "none"
 
-            coreFeaturesContainers2.style.backgroundColor = "rgba(200, 194, 194, 0.5)"
+            if (! body.classList.contains("dark-mode")) {
 
-            coreFeaturesContainers2.style.boxShadow = "none"
+                header.style.backgroundColor ="initial"
+                nav.style.backgroundColor = "initial"
+                allNav.style.backgroundColor = "initial"
+                navLogo.style.backgroundColor = "initial"
+                navLogoText.style.color = "initial"
+    
+    
+                ulNav.style.backgroundColor = "inital"
+                navigationContent1.style.color = "inital"
+    
+                navigationContent2.style.color = "inital"
+                
+                navigationContent3.style.color = "inital"
+    
+                navigationContent4.style.color = "inital"
+    
+                navigationContent5.style.color = "inital"
+    
+                navigationContent6.style.color = "inital"
+    
+                navigationContent7.style.color = "inital"
+    
+                launchApp.style.backgroundColor = "inital"
+
+                
+            }
+
+            // else    {
+            //         toggleMode.style.float = "right"
+            //     }
 
 
-            coreFeaturesContainers3.style.backgroundColor = "rgba(200, 194, 194, 0.5)"
-
-            coreFeaturesContainers3.style.boxShadow = "none"
+        })
 
 
-            coreFeaturesContainers4.style.backgroundColor = "rgba(200, 194, 194, 0.5)"
-
-            coreFeaturesContainers4.style.boxShadow = "none"
-
-
-            coreFeaturesContainers5.style.backgroundColor = "rgba(200, 194, 194, 0.5)"
-
-            coreFeaturesContainers5.style.boxShadow = "none"
-
-
-            coreFeaturesContainers6.style.backgroundColor = "rgba(200, 194, 194, 0.5)"
-
-            coreFeaturesContainers6.style.boxShadow = "none"
-
-        }
+        
